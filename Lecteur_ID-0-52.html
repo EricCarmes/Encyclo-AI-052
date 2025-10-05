@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Smartbook - AudioBook</title>
+  <link rel="stylesheet" href="plyr.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="ID-0-52-Couverture.jpg" alt="Couverture" style="width: 20%; height: auto; margin-bottom: 20px;">
+
+  <div class="logos">
+    <img src="PLANCHE-1a.jpg" alt="Logo AudioBook" style="width: 5%; height: auto; margin-bottom: 20px;">
+    <img src="Logo_resized.jpg" alt="Logo Encyclo-AI" style="width: 10%; height: auto; margin-bottom: 20px;">
+  </div>
+
+<!-- Bloc bouton Play + potentiomètre vitesse -->
+<div class="player-controls">
+  <!-- Gros bouton Play -->
+  <button id="bigPlayBtn" aria-label="Lire ou mettre en pause le livre audio">▶</button>
+
+  <!-- Bloc vitesse -->
+  <div id="speedControl">
+    <div class="speed-label">Vitesse</div>
+    <div class="speed-knob-wrapper">
+      <input type="range" id="speedKnob" min="0.9" max="1.1" step="0.05" value="1" orient="vertical">
+
+      <!-- Colonne repères alignés -->
+      <div id="speedLabels">
+        <span>++</span>
+        <span>+</span>
+        <span>=</span>
+        <span>-</span>
+        <span>--</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Lecteur audio -->
+  <audio id="audioPlayer" controls></audio>
+
+  <!-- Playlist -->
+  <ul id="playlist">
+    <li><a href="Introduction.mp3" style="font-weight: bold;">INTRODUCTION - L'ESSOR ET L'IMPACT DE L'INTELLIGENCE ARTIFICIELLE</a></li>
+
+    <li style="font-weight: bold;">Chapitre 1 - LES ORIGINES DE L'INTELLIGENCE ARTIFICIELLE : CONCEPTS ET PIONNIERS</li>
+    <ul>
+      <li><a href="Chapitre1-1.mp3">1.1 - Alan Turing et le Test de Turing</a></li>
+      <li><a href="Chapitre1-2.mp3">1.2 - La Conférence de Dartmouth et l'Origine du Terme IA</a></li>
+      <li><a href="Chapitre1-3.mp3">1.3 - Les Premiers Systèmes Symboliques</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 2 - LES SYSTÈMES SYMBOLIQUES ET LE BON VIEUX TEMPS DE L'IA</li>
+    <ul>
+      <li><a href="Chapitre2-1.mp3">2.1 - Les Algorithmes Symboliques</a></li>
+      <li><a href="Chapitre2-2.mp3">2.2 - Les Limites des Systèmes Symboliques</a></li>
+      <li><a href="Chapitre2-3.mp3">2.3 - Applications Pratiques des Systèmes Symboliques</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 3 - LES HIVERS DE L'INTELLIGENCE ARTIFICIELLE : DÉSILLUSION ET RÉFLEXION</li>
+    <ul>
+      <li><a href="Chapitre3-1.mp3">3.1 - Les Causes des Hivers de l'IA</a></li>
+      <li><a href="Chapitre3-2.mp3">3.2 - Les Conséquences des Hivers de l'IA</a></li>
+      <li><a href="Chapitre3-3.mp3">3.3 - Leçons Apprises des Hivers de l'IA</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 4 - LE RENOUVEAU DE L'IA : RÉSEAUX DE NEURONES ET APPRENTISSAGE AUTOMATIQUE</li>
+    <ul>
+      <li><a href="Chapitre4-1.mp3">4.1 - Les Réseaux de Neurones Artificiels</a></li>
+      <li><a href="Chapitre4-2.mp3">4.2 - L'Apprentissage Automatique</a></li>
+      <li><a href="Chapitre4-3.mp3">4.3 - Applications des Réseaux de Neurones</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 5 - L'ÉMERGENCE DU DEEP LEARNING : RÉVOLUTION TECHNOLOGIQUE</li>
+    <ul>
+      <li><a href="Chapitre5-1.mp3">5.1 - Les Fondements du Deep Learning</a></li>
+      <li><a href="Chapitre5-2.mp3">5.2 - Les Avancées Technologiques du Deep Learning</a></li>
+      <li><a href="Chapitre5-3.mp3">5.3 - Applications Révolutionnaires du Deep Learning</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 6 - APPLICATIONS ACTUELLES DE L'IA : TRANSFORMATIONS DANS DIVERS SECTEURS</li>
+    <ul>
+      <li><a href="Chapitre6-1.mp3">6.1 - L'IA dans la Santé</a></li>
+      <li><a href="Chapitre6-2.mp3">6.2 - L'IA dans la Finance</a></li>
+      <li><a href="Chapitre6-3.mp3">6.3 - L'IA dans les Transports</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 7 - LES ENJEUX ÉTHIQUES DE L'IA : DÉFIS À RELEVER</li>
+    <ul>
+      <li><a href="Chapitre7-1.mp3">7.1 - La Protection des Données Personnelles</a></li>
+      <li><a href="Chapitre7-2.mp3">7.2 - La Transparence des Algorithmes</a></li>
+      <li><a href="Chapitre7-3.mp3">7.3 - L'Impact Social et Économique de l'IA</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 8 - LE RÔLE DE L'IA DANS LES ARTS ET LA CRÉATIVITÉ</li>
+    <ul>
+      <li><a href="Chapitre8-1.mp3">8.1 - L'IA dans la Musique et les Arts Visuels</a></li>
+      <li><a href="Chapitre8-2.mp3">8.2 - La Génération de Contenu par l'IA</a></li>
+      <li><a href="Chapitre8-3.mp3">8.3 - Les Débats sur l'Art et l'IA</a></li>
+    </ul>
+
+    <li><a href="Conclusion.mp3" style="font-weight: bold;">CONCLUSION - VERS UN AVENIR MODELÉ PAR L'INTELLIGENCE ARTIFICIELLE</a></li>
+  </ul>
+
+  <p><a href="ID-0-52-Annexes.pdf" target="_blank">📄 Consulter les annexes du livre</a></p>
+  <p><a href="mentions_legales.pdf">Mentions légales</a></p>
+
+  <script src="plyr.polyfilled.js"></script>
+  <script src="lecteur.js"></script>
+</body>
+</html>
